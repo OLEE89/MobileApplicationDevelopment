@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApplicationDevelopment.Views.AddContactPage"
+             xmlns:control="clr-namespace:MobileApplicationDevelopment.Views.Controls"
+
+             Title="Add User Page" BackgroundColor="DarkBlue"
+             Shell.BackgroundColor="DeepSkyBlue">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <control:ContactControl x:Name="ContactCtrl"
+                            OnSave="ControlCtrl_OnSave">
+
+    </control:ContactControl>
+
+
+        <Image Source="D:\aurel scoala\FinalYear\MobileApp\pictures\pictwo.png"
+               Grid.Row="1" Grid.Column="1"
+               HorizontalOptions="Center" VerticalOptions="End"
+               Margin="0,0,0,10" HeightRequest="400" WidthRequest="350"/>
+    </Grid>
+
+
+</ContentPage>

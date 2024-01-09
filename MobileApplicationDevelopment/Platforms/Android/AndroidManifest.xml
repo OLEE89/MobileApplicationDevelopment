@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.mobileapplicationdevelopment">
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true" android:theme="@style/MainTheme">
+		<activity android:label="MobileApplicationDevelopment" android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|uiMode" android:launchMode="singleTask" android:screenOrientation="portrait" android:theme="@style/SplashTheme" android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="crc64ee486da937c010f4.MainActivity" android:label="MobileApplicationDevelopment" android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|uiMode" android:theme="@style/MainTheme" android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+	</application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+</manifest>

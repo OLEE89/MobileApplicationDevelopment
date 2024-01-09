@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApplicationDevelopment.Views.Controls.ContactControl">
+
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+          ColumnDefinitions="60*"
+          RowSpacing="10"
+          Padding="10"
+          Margin="15">
+
+        <Label Text="FirstName"
+               FontSize="18"
+               Grid.Row="0"/>
+        <Entry Grid.Row="1"
+               x:Name="Entry_First_Name"/>
+
+        <Label Text="LastName"
+               FontSize="18"
+               Grid.Row="2"/>
+        <Entry Grid.Row="3"
+               x:Name="Entry_Last_Name"/>
+
+        <Label Text="Email"
+               FontSize="18"
+               Grid.Row="4"/>
+        <Entry Grid.Row="5"
+               x:Name="Entry_Email"/>
+
+        <Button Text="Save Contact"
+                BackgroundColor="DeepSkyBlue"
+                Grid.Row="6"
+                x:Name="BtnContactSave"
+                Clicked="BtnContactSave_Clicked"/>
+        
+        <Button Text="Back to Home Page"
+                BackgroundColor="DeepSkyBlue"
+                Grid.Row="7"
+                x:Name="BtnGoBack"
+                Clicked="BtnGoBack_Clicked"/>
+
+
+    </Grid>
+    
+    
+</ContentView>

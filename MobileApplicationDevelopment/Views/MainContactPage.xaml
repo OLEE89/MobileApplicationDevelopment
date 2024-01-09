@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApplicationDevelopment.Views.MainContactPage"
+             Title="                     Welcome to Mobile Application Development using Net.MAUI"  BackgroundColor="DarkBlue"
+             Shell.BackgroundColor="DeepSkyBlue">
+
+ 
+    
+    <Grid RowDefinitions="Auto,100*"
+          ColumnDefinitions=".70*, .30*"
+          RowSpacing="10"
+          Margin="25"
+          Padding="10">
+
+        <SearchBar Grid.Row="0"
+                   Grid.Column="0"
+                   Placeholder="Search User"
+                   BackgroundColor="Black"
+                   TextColor="White"
+                   Margin="10"
+                   x:Name="searchbar"
+                   TextChanged="searchbar_TextChanged"/>
+
+
+        <Label Text="List of Users"
+               FontAttributes="Bold"
+               BackgroundColor="DeepSkyBlue"
+               FontSize="20"
+               Grid.Row="1"
+               Margin="15"
+               Padding="5"
+               HorizontalOptions="Fill"/>
+        
+        
+
+
+        <Button Text="Add New User"
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalOptions="End"
+                BackgroundColor="Silver"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="15"
+                Padding="10"
+                Margin="10"
+                BorderWidth="0"
+                x:Name="BtnAddContact"
+                Clicked="BtnAddContact_Clicked"/>
+
+        <Label Text="Created by George-Aurel Hancianu   ID : 18166"
+               Grid.Row="8"
+               Grid.Column="1"
+               Padding="55"
+               Margin="60"/>
+
+
+        <ListView BackgroundColor="DarkBlue"
+                  Grid.Row="1"
+                  Grid.ColumnSpan="1"
+              x:Name="xmlContactList"
+              RowHeight="50"
+                  Margin="50"  
+              SeparatorColor="DeepSkyBlue"
+              ItemSelected="xmlContactList_ItemSelected"
+              ItemTapped="xmlContactList_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding FullName}"
+                          Detail="{Binding Email}">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Delete"
+                                      x:Name="MenuItemDelete"
+                                      IsDestructive="True"
+                                      Clicked="MenuItemDelete_Clicked"
+                                      CommandParameter="{Binding .}"/>
+
+                            <MenuItem Text="Edit"
+                                      x:Name="MenuItemEdit"
+                                      Clicked="MenuItemEdit_Clicked"
+                                      CommandParameter="{Binding .}"/>
+                            
+                        </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+
+        </ListView>
+
+        <Image Source="D:\aurel scoala\FinalYear\MobileApp\pictures\picone.png" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" 
+               VerticalOptions="End" Margin="0,0,0,10" HeightRequest="500" WidthRequest="850"/>
+        <Image Source="D:\aurel scoala\FinalYear\MobileApp\pictures\pictwo.png" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" 
+               VerticalOptions="End" Margin="0,0,0,10" HeightRequest="400" WidthRequest="350"/>
+        <BoxView Color="DeepSkyBlue" HeightRequest="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Margin="1"/>
+        <BoxView Color="DeepSkyBlue" HeightRequest="5" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Margin="1"/>
+        <BoxView Color="DeepSkyBlue" HeightRequest="5" HorizontalOptions="FillAndExpand" Grid.Column="1" VerticalOptions="StartAndExpand" Margin="1"/>
+        <BoxView Color="DeepSkyBlue" HeightRequest="5" HorizontalOptions="FillAndExpand" Grid.Column="1" VerticalOptions="EndAndExpand" Margin="1"/>
+        <BoxView Color="DeepSkyBlue" HeightRequest="5" HorizontalOptions="FillAndExpand" Grid.Column="1" VerticalOptions="EndAndExpand" Margin="1"/>
+        <BoxView Grid.Row="2" Color="DeepSkyBlue"  HorizontalOptions="FillAndExpand" Grid.Column="1" VerticalOptions="End" Margin="15" 
+                 HeightRequest="35" WidthRequest="800"/>
+
+
+
+    </Grid>
+
+
+</ContentPage>
